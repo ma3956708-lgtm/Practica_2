@@ -1,0 +1,24 @@
+[wokwi]
+version = 1
+firmware = ".pio/build/esp32dev/firmware.bin"
+elf = ".pio/build/esp32dev/firmware.elf"
+board = "esp32-devkit-v1"
+
+# -----------------------------
+# Sensor ultrasónico HC-SR04
+# -----------------------------
+[[wokwi.peripheral]]
+name = "hc-sr04"
+trig = 5
+echo = 18
+
+# -----------------------------
+# Pantalla LCD I2C
+# -----------------------------
+[[wokwi.peripheral]]
+name = "lcd1602"
+i2c_address = 0x27
+sda = 21
+scl = 22
+rows = 2
+cols = 16
